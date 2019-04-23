@@ -1,1 +1,3 @@
-# App-Go-Barber
+# WebApp Go Barber
+
+Gerenciamento de horários
