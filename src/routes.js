@@ -21,6 +21,8 @@ routes.post('/signup', upload.single('avatar'), UserController.store)
   de serem acessadas por usuarios que não estão logados */
 routes.use('/app', authMiddlaware)
 
+routes.get('/app/logout', SessionController.destroy)
+
 routes.get('/app/dashboard', (req, res) => {
   console.log(req.session.user)
   return res.render('dashboard')
