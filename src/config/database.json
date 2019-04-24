@@ -1,4 +1,3 @@
-/* eslint-disable quotes */
 (module.exports = {
   "dialect": "postgres",
   "host": "127.0.0.1",
