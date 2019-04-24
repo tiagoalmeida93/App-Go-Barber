@@ -20,6 +20,7 @@ class SessionController {
       return res.redirect('/')
     }
 
+    req.session.user = user
     // Se tudo isso deu certo o usuário será
     // redirecionado para o Dashboard da aplicação
     return res.redirect('/app/dashboard')
