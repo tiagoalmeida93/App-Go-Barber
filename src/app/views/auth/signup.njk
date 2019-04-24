@@ -1,5 +1,34 @@
 {% extends "_layouts/auth.njk" %}
 
 {% block body %}
-  <h1>Hello World</h1>
+<form action="/signup" method="POST">
+  <label for="avatar">
+    <img src="/images/avatar.svg" height="24" />
+  </label>
+
+  <input id="avatar" name="avatar" type="file" />
+
+  <input type="text" name="name" placeholder="Nome Completo" />
+  <input type="email" name="email" placeholder="seu@email.com" />
+  <input type="password" name="password" placeholder="Senha Secreta" />
+
+  <label for="provider">
+    <input type="checkbox" name="provider" id="provider" value="1" />
+    Sou Cabelereiro/Barbeiro
+  </label>
+
+  <button type="submit">Criar Conta</button>
+
+  <a href="/">Já possuo uma conta</a>
+</form>
+
+<script type="text/javascript">
+  let avatarInput = document.getElementById('avatar')
+  let img = document.querySelector('label[for=avatar] img')
+
+  avatarInput.onchange = function(e) {
+    img.classList.add('preview')
+    img.src = URL.createObjectURL(e.target.files[0]) //o InputFile pode trazer mais de um arquivo, mas como só temos uma imagem, passamos a posição 0 do array para pegar o primeiro registro
+  }
+</script>
 {% endblock %}
