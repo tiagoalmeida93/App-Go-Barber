@@ -11,6 +11,7 @@ const UserController = require('./app/controllers/UserController')
 const SessionController = require('./app/controllers/SessionController')
 const DashboardController = require('./app/controllers/DashboardController')
 const FileController = require('./app/controllers/FileController')
+const AppointmentControler = require('./app/controllers/AppointmentControler')
 
 routes.use((req, res, next) => {
   res.locals.flashSucces = req.flash('sucess')
@@ -35,5 +36,7 @@ routes.use('/app', authMiddlaware)
 routes.get('/app/logout', SessionController.destroy)
 
 routes.get('/app/dashboard', DashboardController.index)
+
+routes.get('/app/appointments/new/:provider', AppointmentControler.create)
 
 module.exports = routes
