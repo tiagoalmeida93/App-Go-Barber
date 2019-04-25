@@ -1,6 +1,6 @@
 const { User } = require('../models')
 
-class AppointmentControler {
+class AppointmentController {
   async create (req, res) {
     const provider = await User.findByPk(req.params.provider)
 
@@ -8,4 +8,4 @@ class AppointmentControler {
   }
 }
 
-module.exports = new AppointmentControler()
+module.exports = new AppointmentController()
