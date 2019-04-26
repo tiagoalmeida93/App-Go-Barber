@@ -12,6 +12,10 @@ module.exports = {
   password: 'docker',
   database: 'gonodemodule2',
   operatorAliases: false,
+  dialectOptions: {
+    useUTC: true // -->Add this line. for reading from database
+  },
+  timezone: '-03:00', // -->Add this line. for writing to database
   define: {
     timestamps: true, // Adiciona as colunas createdAt e updatedAt em nossas bases de dados
     underscored: true, // Permite o sequelize utilizar o snake_case e/ou camel_case nas colunas do DB
