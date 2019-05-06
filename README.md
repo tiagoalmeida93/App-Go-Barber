@@ -1,6 +1,7 @@
 # WebApp Go Barber
 
 Gerenciamento de horários
+<br>
 O aplicativo tem como objetivo utilizar as melhores práticas do NodeJS + MVC + PostgreSQL.
 
 <br>
