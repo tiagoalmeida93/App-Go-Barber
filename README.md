@@ -4,8 +4,6 @@ Gerenciamento de horários
 <br>
 O aplicativo tem como objetivo utilizar as melhores práticas do NodeJS + MVC + PostgreSQL.
 
-<br>
-
 ### Configurando o Ambiente
 
 Para configuração do ambiente de desenvolvimento, foi utilizado o eslint + editorconfig. <br>
